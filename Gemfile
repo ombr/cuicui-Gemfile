@@ -3,11 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.1.1'
 
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.1'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 gem 'sass', '3.2.14'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +33,6 @@ gem 'cloudinary', github: 'cloudinary/cloudinary_gem', branch: 'master'
 gem 'devise'
 gem 'cancan'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'sentry-raven'
 
@@ -47,8 +46,8 @@ gem 'font-awesome-rails'
 gem 'entypo-rails'
 gem 'bourbon'
 gem 'jquery-fileupload-rails'
-#gem 'pagedown-rails'
-gem "intercom-rails"
+# gem 'pagedown-rails'
+gem 'intercom-rails'
 
 gem 'simple_form'
 gem 'language_list'
@@ -57,6 +56,12 @@ gem 'flutie'
 gem 'acts_as_list'
 
 gem 'redcarpet'
+
+# gem 'memcachier'
+# gem 'dalli'
+# gem 'kgio'
+gem 'rack-cache'
+gem 'rack-offline'
 
 gem 'unicorn'
 gem 'rack-timeout'
@@ -73,10 +78,13 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl'
   gem 'capybara'
+  gem 'capybara-email'
+  gem 'launchy'
 end
 
 group :development do
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'pry-rails'
   gem 'meta_request'
 end
